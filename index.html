@@ -3,54 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#e9dfca">
-  <meta name="description" content="《道德经》八十一章。循章而读，在原文、图像与逐步生长的理解之间，留一点空白。">
-  <title>道德经 · 循章而读</title>
+  <meta name="theme-color" content="#efece3">
+  <meta name="description" content="《道德经》八十一章。一章一句，读其文，记其所悟。">
+  <title>道德经</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:,">
   <script src="./chapters.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
 <body>
-  <div class="site-frame">
-    <header class="topbar">
-      <a class="brand" href="#chapter-01" aria-label="道德经，回到第一章">
-        <span class="brand-seal" aria-hidden="true">道</span>
-        <span class="brand-name">道德经<small>循章而读</small></span>
-      </a>
-      <div class="edition-note"><span class="edition-dot" aria-hidden="true"></span>通行本 · 王弼注本</div>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="chapter-index" aria-expanded="false">
-        <span class="menu-glyph" aria-hidden="true">☰</span><span>章目</span>
-      </button>
-    </header>
+  <header class="bar">
+    <a class="mark" href="#chapter-01" aria-label="道德经，回到第一章">
+      <span class="mark-char" aria-hidden="true">道</span>
+      <span class="mark-text">道德经</span>
+    </a>
+    <span class="bar-part" id="bar-part"></span>
+    <button class="toc-btn" id="toc-toggle" type="button" aria-controls="toc" aria-expanded="false">
+      <span class="toc-glyph" aria-hidden="true"></span><span>卷目</span>
+    </button>
+  </header>
 
-    <div class="reading-layout">
-      <aside class="chapter-index" id="chapter-index" aria-label="章节目录">
-        <div class="index-heading">
-          <span class="index-overline">CHAPTERS</span>
-          <span class="index-count">八十一章</span>
-        </div>
-        <nav class="chapter-nav" aria-label="选择章节">
-          <div class="nav-part">
-            <div class="nav-part-title"><span>道经</span><small>上篇 · 01—37</small></div>
-            <div class="chapter-list" id="dao-list"></div>
-          </div>
-          <div class="nav-part nav-part-de">
-            <div class="nav-part-title"><span>德经</span><small>下篇 · 38—81</small></div>
-            <div class="chapter-list" id="de-list"></div>
-          </div>
-        </nav>
-        <div class="index-footnote">道 · 德<br><span>上下相生</span></div>
-      </aside>
+  <main class="main" id="chapter-page"></main>
 
-      <main class="reading-main" id="reading-main">
-        <div id="chapter-page" aria-live="polite"></div>
-      </main>
+  <footer class="foot">
+    <span id="foot-progress"></span>
+    <span>通行本 · 王弼注本</span>
+  </footer>
+
+  <div class="toc" id="toc" hidden>
+    <div class="toc-inner">
+      <div class="toc-head">
+        <span class="toc-title">卷目</span>
+        <button class="toc-close" id="toc-close" type="button">收</button>
+      </div>
+      <div class="toc-body" id="toc-body"></div>
     </div>
-
-    <footer class="site-footer">
-      <span>老子 · 道德经</span>
-      <span id="footer-progress">循章而读</span>
-    </footer>
   </div>
 </body>
 </html>

@@ -1,147 +1,208 @@
 (() => {
   const chapters = window.TAO_CHAPTERS || [];
   const page = document.getElementById("chapter-page");
-  const daoList = document.getElementById("dao-list");
-  const deList = document.getElementById("de-list");
-  const menuToggle = document.getElementById("menu-toggle");
-  const chapterIndex = document.getElementById("chapter-index");
-  const footerProgress = document.getElementById("footer-progress");
+  const toc = document.getElementById("toc");
+  const tocBody = document.getElementById("toc-body");
+  const tocToggle = document.getElementById("toc-toggle");
+  const tocClose = document.getElementById("toc-close");
+  const bar = document.querySelector(".bar");
+  const barPart = document.getElementById("bar-part");
+  const footProgress = document.getElementById("foot-progress");
 
-  const pad = (number) => String(number).padStart(2, "0");
-  const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (character) => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#39;"
-  })[character]);
+  const NOTES = [
+    { key: "personalUnderstanding", label: "个人理解", kind: "note--primary" },
+    { key: "aiInterpretation", label: "AI 解读", kind: "" },
+    { key: "sharedReading", label: "与人共读", kind: "note--quote" },
+    { key: "aiDialogue", label: "与 AI 对谈", kind: "note--quote" }
+  ];
 
-  function buildChapterLinks() {
-    const makeLink = (chapter) => `
-      <a class="chapter-link" href="#chapter-${pad(chapter.id)}" data-chapter-link="${chapter.id}"
-         aria-label="${chapter.part} ${chapter.title}">${pad(chapter.id)}</a>`;
-    daoList.innerHTML = chapters.filter((chapter) => chapter.id <= 37).map(makeLink).join("");
-    deList.innerHTML = chapters.filter((chapter) => chapter.id >= 38).map(makeLink).join("");
+  const pad = (n) => String(n).padStart(2, "0");
+  const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[c]);
+
+  function firstClause(text) {
+    const match = String(text).match(/^[^，。；：！？]+/);
+    return (match ? match[0] : String(text)).trim();
   }
 
-  function getChapterFromHash() {
-    const match = window.location.hash.match(/^#chapter-(\d{2})$/);
+  function splitClauses(text) {
+    const found = String(text).match(/[^；。！？]+[；。！？]?/g);
+    return (found || [text]).map((line) => line.trim()).filter(Boolean);
+  }
+
+  function partName(id) {
+    return id <= 37 ? "上篇 · 道经" : "下篇 · 德经";
+  }
+
+  function chapterFromHash() {
+    const match = window.location.hash.match(/^#chapter-(\d{1,2})$/);
     const id = match ? Number(match[1]) : 1;
-    return chapters.find((chapter) => chapter.id === id) || chapters[0];
+    return chapters.find((item) => item.id === id) || chapters[0];
   }
 
-  function reflectionCard(label, number, content) {
-    return `
-      <article class="reflection-card">
-        <h3><span class="note-index">${number}</span>${label}</h3>
-        <div class="reflection-content">${content ? escapeHTML(content) : ""}</div>
-      </article>`;
+  function sizeHero() {
+    const hero = page.querySelector(".hero-clause");
+    const heroBox = page.querySelector(".hero");
+    if (!hero || !heroBox || !hero.dataset.chars) return;
+    const style = getComputedStyle(heroBox);
+    const avail = heroBox.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+    const chars = Number(hero.dataset.chars);
+    const perLine = window.innerWidth < 700 && chars > 6 ? Math.ceil(chars / 2) : chars;
+    const size = Math.min((avail / perLine) * 0.96, window.innerWidth * 0.16, 260);
+    hero.style.fontSize = Math.max(size, 22) + "px";
   }
 
   function renderChapter(chapter) {
+    const clause = firstClause(chapter.text);
+    const lines = splitClauses(chapter.text);
     const previous = chapters.find((item) => item.id === chapter.id - 1);
     const next = chapters.find((item) => item.id === chapter.id + 1);
-    const partLabel = chapter.id <= 37 ? "上篇 · 道经" : "下篇 · 德经";
-    const imageMarkup = chapter.image
-      ? `<div class="image-well"><img src="${escapeHTML(chapter.image)}" alt="${escapeHTML(chapter.title)}配图"></div>`
-      : `<div class="image-well is-empty" role="img" aria-label="${escapeHTML(chapter.title)}的配图区域"></div>`;
+    const filled = NOTES.filter((note) => String(chapter[note.key] || "").trim());
+
+    const notesMarkup = filled.length
+      ? filled.map((note) => `
+          <section class="note ${note.kind}">
+            <h2 class="note-label">${note.label}</h2>
+            <div class="note-body">${escapeHTML(String(chapter[note.key]).trim())}</div>
+          </section>`).join("")
+      : `<p class="notes-empty">${NOTES.map((note) => `<span>${note.label}</span>`).join("")}</p>`;
+
+    const plateMarkup = String(chapter.image || "").trim()
+      ? `<figure class="plate"><img src="${escapeHTML(String(chapter.image).trim())}" alt="${escapeHTML(clause)} 的意象"></figure>`
+      : "";
 
     page.innerHTML = `
-      <article class="chapter-page" aria-labelledby="chapter-title">
-        <header class="chapter-heading" id="chapter-heading">
-          <div>
-            <div class="chapter-kicker">
-              <span class="part-name">${partLabel}</span>
-              <span>王弼本 · ${chapter.title}</span>
-            </div>
-            <h1 id="chapter-title"><span class="chapter-number">${pad(chapter.id)}</span>${escapeHTML(chapter.title)}</h1>
+      <article class="chapter">
+        <section class="hero">
+          <div class="hero-meta">
+            <span class="hero-no">${chapter.title}</span>
+            <span class="hero-dash" aria-hidden="true"></span>
+            <span>${partName(chapter.id)}</span>
           </div>
-          <div class="chapter-position"><strong>${pad(chapter.id)}</strong> / 81</div>
-        </header>
+          <h1 class="hero-clause" data-chars="${[...clause].length}">${escapeHTML(clause)}</h1>
+          <div class="hero-rule" aria-hidden="true"></div>
+        </section>
 
-        <div class="chapter-hero">
-          <section class="scripture" aria-labelledby="scripture-heading">
-            <h2 class="section-label" id="scripture-heading">本章原文</h2>
-            <p class="scripture-text">${escapeHTML(chapter.text)}</p>
-          </section>
-          <figure class="artwork-figure">
-            ${imageMarkup}
-            <figcaption><span>本章意象</span><span>${pad(chapter.id)} · 81</span></figcaption>
-          </figure>
-        </div>
-
-        <section class="reflection-section" aria-labelledby="reflection-heading">
-          <div class="reflection-heading">
-            <h2 id="reflection-heading">解读与札记</h2>
-            <p>读其文 · 观其意 · 记所得</p>
-          </div>
-          <div class="reflection-grid">
-            ${reflectionCard("AI 解读", "01", chapter.aiInterpretation)}
-            ${reflectionCard("个人理解", "02", chapter.personalUnderstanding)}
-            ${reflectionCard("与人共读", "03", chapter.sharedReading)}
-            ${reflectionCard("与 AI 对谈", "04", chapter.aiDialogue)}
+        <section class="scripture">
+          <div class="scripture-inner">
+            <p class="scripture-text">${lines
+              .map((line, index) => `<span class="line" style="--i:${index}">${escapeHTML(line)}</span>`)
+              .join("")}</p>
           </div>
         </section>
 
-        <nav class="chapter-controls" aria-label="章节翻页">
-          <button class="chapter-control previous" type="button" data-target="${previous ? previous.id : ""}" ${previous ? "" : "disabled"}>
-            <span class="control-direction"><span class="control-arrow" aria-hidden="true">←</span> 上一章</span>
-            <span class="control-title">${previous ? escapeHTML(previous.title) : "篇首"}</span>
-          </button>
-          <button class="chapter-control next" type="button" data-target="${next ? next.id : ""}" ${next ? "" : "disabled"}>
-            <span class="control-direction">下一章 <span class="control-arrow" aria-hidden="true">→</span></span>
-            <span class="control-title">${next ? escapeHTML(next.title) : "篇末"}</span>
-          </button>
+        ${plateMarkup}
+
+        <section class="notes">
+          <div class="notes-inner">
+            <h2 class="notes-title">札记</h2>
+            ${notesMarkup}
+          </div>
+        </section>
+
+        <nav class="pager" aria-label="章节翻页">
+          ${previous
+            ? `<a class="pager-link prev" href="#chapter-${pad(previous.id)}">
+                 <span class="pager-dir">上一章 · ${previous.title}</span>
+                 <span class="pager-clause">${escapeHTML(firstClause(previous.text))}</span>
+               </a>`
+            : `<span class="pager-link prev is-end"><span class="pager-dir">道经之首</span><span class="pager-clause">卷首</span></span>`}
+          ${next
+            ? `<a class="pager-link next" href="#chapter-${pad(next.id)}">
+                 <span class="pager-dir">下一章 · ${next.title}</span>
+                 <span class="pager-clause">${escapeHTML(firstClause(next.text))}</span>
+               </a>`
+            : `<span class="pager-link next is-end"><span class="pager-dir">德经之末</span><span class="pager-clause">卷末</span></span>`}
         </nav>
       </article>`;
 
-    document.querySelectorAll("[data-chapter-link]").forEach((link) => {
-      const active = Number(link.dataset.chapterLink) === chapter.id;
-      if (active) link.setAttribute("aria-current", "page");
-      else link.removeAttribute("aria-current");
-    });
-    footerProgress.textContent = `${pad(chapter.id)} / 81 · ${partLabel}`;
-    document.title = `${chapter.title} · 道德经`;
+    sizeHero();
+    barPart.textContent = partName(chapter.id);
+    footProgress.textContent = `${chapter.title} · 共八十一章`;
+    document.title = `${clause} · 道德经`;
 
-    page.querySelectorAll(".chapter-control[data-target]").forEach((button) => {
-      if (button.disabled) return;
-      button.addEventListener("click", () => {
-        window.location.hash = `chapter-${pad(Number(button.dataset.target))}`;
-      });
+    document.querySelectorAll(".toc-row").forEach((row) => {
+      row.setAttribute("aria-current", String(Number(row.dataset.id) === chapter.id));
     });
   }
 
-  function navigateToCurrentHash() {
-    const chapter = getChapterFromHash();
-    const expectedHash = `#chapter-${pad(chapter.id)}`;
-    if (window.location.hash !== expectedHash) {
-      window.history.replaceState(null, "", expectedHash);
+  function buildToc() {
+    const row = (chapter) => `
+      <a class="toc-row" href="#chapter-${pad(chapter.id)}" data-id="${chapter.id}">
+        <span class="toc-row-no">${pad(chapter.id)}</span>
+        <span class="toc-row-clause">${escapeHTML(firstClause(chapter.text))}</span>
+      </a>`;
+
+    tocBody.innerHTML = `
+      <div class="toc-part">上篇 道经 · 一至三十七</div>
+      ${chapters.filter((c) => c.id <= 37).map(row).join("")}
+      <div class="toc-part">下篇 德经 · 三十八至八十一</div>
+      ${chapters.filter((c) => c.id >= 38).map(row).join("")}`;
+  }
+
+  function openToc() {
+    toc.hidden = false;
+    tocToggle.setAttribute("aria-expanded", "true");
+    document.body.classList.add("is-locked");
+    const current = tocBody.querySelector('.toc-row[aria-current="true"]');
+    if (current) current.scrollIntoView({ block: "center" });
+    tocClose.focus({ preventScroll: true });
+  }
+
+  function closeToc() {
+    toc.hidden = true;
+    tocToggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("is-locked");
+    tocToggle.focus({ preventScroll: true });
+  }
+
+  function goToHash() {
+    const chapter = chapterFromHash();
+    const expected = `#chapter-${pad(chapter.id)}`;
+    if (window.location.hash !== expected) {
+      window.history.replaceState(null, "", expected);
     }
     renderChapter(chapter);
+    window.scrollTo(0, 0);
+    bar.classList.remove("is-scrolled");
   }
 
-  buildChapterLinks();
-  navigateToCurrentHash();
+  buildToc();
+  goToHash();
+
   window.addEventListener("hashchange", () => {
-    navigateToCurrentHash();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    chapterIndex.classList.remove("is-open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    if (!toc.hidden) closeToc();
+    goToHash();
   });
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = chapterIndex.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  window.addEventListener("resize", sizeHero);
+
+  window.addEventListener("scroll", () => {
+    bar.classList.toggle("is-scrolled", window.scrollY > 8);
+  }, { passive: true });
+
+  tocToggle.addEventListener("click", () => (toc.hidden ? openToc() : closeToc()));
+  tocClose.addEventListener("click", closeToc);
+  tocBody.addEventListener("click", (event) => {
+    if (event.target.closest(".toc-row")) closeToc();
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.altKey || event.ctrlKey || event.metaKey) return;
-    if (["INPUT", "TEXTAREA", "SELECT", "BUTTON", "A"].includes(document.activeElement.tagName)) return;
-    if (event.key === "ArrowLeft" && getChapterFromHash().id > 1) {
-      window.location.hash = `chapter-${pad(getChapterFromHash().id - 1)}`;
+    if (event.key === "Escape" && !toc.hidden) {
+      closeToc();
+      return;
     }
-    if (event.key === "ArrowRight" && getChapterFromHash().id < chapters.length) {
-      window.location.hash = `chapter-${pad(getChapterFromHash().id + 1)}`;
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (!toc.hidden) return;
+    const tag = document.activeElement && document.activeElement.tagName;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(tag)) return;
+    const current = chapterFromHash();
+    if (event.key === "ArrowLeft" && current.id > 1) {
+      window.location.hash = `chapter-${pad(current.id - 1)}`;
+    }
+    if (event.key === "ArrowRight" && current.id < chapters.length) {
+      window.location.hash = `chapter-${pad(current.id + 1)}`;
     }
   });
 })();
