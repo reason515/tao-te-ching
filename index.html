@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#efece3">
-  <meta name="description" content="《道德经》八十一章。一章一句，读其文，记其所悟。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0d0a">
+  <meta name="description" content="《道德经》八十一章。一章一页，读其文，观其象，记其所悟。">
   <title>道德经</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="data:,">
@@ -12,15 +12,18 @@
   <script src="./app.js" defer></script>
 </head>
 <body>
+  <div class="thread" aria-hidden="true"><span class="thread-fill" id="thread-fill"></span></div>
+
   <header class="bar">
     <a class="mark" href="#chapter-01" aria-label="道德经，回到第一章">
       <span class="mark-char" aria-hidden="true">道</span>
       <span class="mark-text">道德经</span>
     </a>
-    <span class="bar-part" id="bar-part"></span>
-    <button class="toc-btn" id="toc-toggle" type="button" aria-controls="toc" aria-expanded="false">
-      <span class="toc-glyph" aria-hidden="true"></span><span>卷目</span>
-    </button>
+    <div class="bar-tools">
+      <button class="bar-btn" id="toc-toggle" type="button" aria-controls="toc" aria-expanded="false">
+        <span class="toc-glyph" aria-hidden="true"></span><span>卷目</span>
+      </button>
+    </div>
   </header>
 
   <main class="main" id="chapter-page"></main>
@@ -34,9 +37,10 @@
     <div class="toc-inner">
       <div class="toc-head">
         <span class="toc-title">卷目</span>
+        <span class="toc-stat" id="toc-stat"></span>
         <button class="toc-close" id="toc-close" type="button">收</button>
       </div>
-      <div class="toc-body" id="toc-body"></div>
+      <nav class="toc-body" id="toc-body" aria-label="八十一章"></nav>
     </div>
   </div>
 </body>
