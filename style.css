@@ -281,15 +281,18 @@ button { font: inherit; color: inherit; }
   display: block;
   padding-left: 1.2em;
   text-indent: -1.2em;
+  text-wrap: balance;
   opacity: 0;
   filter: blur(3px);
   transform: translateY(10px);
   transition: opacity 1.6s ease, filter 1.6s ease, transform 1.6s var(--slow);
 }
 
-.clause { display: inline-block; }
-
-.line { text-wrap: balance; }
+/* 分句不拆开；保持行内，避免 inline-block 把字距算丢、标点叠字 */
+.clause {
+  display: inline;
+  white-space: nowrap;
+}
 
 .line.is-in {
   opacity: 1;
