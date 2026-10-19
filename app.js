@@ -89,7 +89,7 @@
 
   function noteBodyMarkup(note, text) {
     if (note.key !== "aiDialogue") {
-      return paragraphs(text).map((p) => `<p>${escapeHTML(p)}</p>`).join("");
+      return paragraphs(text).map((p) => `<p${/^——/.test(p) ? ' class="sig"' : ""}>${escapeHTML(p)}</p>`).join("");
     }
     return paragraphs(text).map((p) => {
       const turn = p.match(/^(问|答)[：:]\s*([\s\S]*)$/);

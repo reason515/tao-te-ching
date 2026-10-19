@@ -11,6 +11,10 @@
   --seal-glow: #c2583c;
   --line: rgba(217, 212, 196, .1);
   --serif: "Source Han Serif SC", "Noto Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+  --sans: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  --kai: "KaiTi", "Kaiti SC", "STKaiti", "AR PL UKai CN", "Source Han Serif SC", "Noto Serif SC", serif;
+  --ai-ink: #9fb0b4;
+  --ai-ink-3: #66777c;
   --gutter: clamp(22px, 7vw, 132px);
   --slow: cubic-bezier(.16, .84, .24, 1);
 }
@@ -465,7 +469,31 @@ button { font: inherit; color: inherit; }
 .note-body p:last-child { margin-bottom: 0; }
 
 .note--self .note-label { color: var(--seal-glow); }
-.note--self .note-body { color: var(--ink); font-size: clamp(17px, 1.45vw, 20px); }
+.note--self .note-body {
+  color: var(--ink);
+  font-family: var(--kai);
+  font-size: clamp(18px, 1.5vw, 21px);
+}
+
+/* AI 所作：无衬线、冷灰青，与正文和心得分开 */
+.note--ai .note-label,
+.note--dialogue .note-label { color: var(--ai-ink-3); font-family: var(--sans); }
+.note--ai .note-body,
+.note--dialogue .note-body {
+  color: var(--ai-ink);
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 2;
+  letter-spacing: .03em;
+}
+.note--ai .note-body p.sig {
+  margin-top: 1.8em;
+  color: var(--ai-ink-3);
+  font-size: .85em;
+  text-align: right;
+}
+.dialogue .a { color: var(--ai-ink); }
+.dialogue .a .who { color: var(--ai-ink-3); font-family: var(--sans); }
 
 .note--shared .note-body {
   padding-left: 20px;
