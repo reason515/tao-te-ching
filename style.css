@@ -287,6 +287,10 @@ button { font: inherit; color: inherit; }
   transition: opacity 1.6s ease, filter 1.6s ease, transform 1.6s var(--slow);
 }
 
+.clause { display: inline-block; }
+
+.line { text-wrap: balance; }
+
 .line.is-in {
   opacity: 1;
   filter: blur(0);

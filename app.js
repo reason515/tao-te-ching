@@ -47,6 +47,12 @@
     return (found || [text]).map((line) => line.trim()).filter(Boolean);
   }
 
+  // 每个分句不可拆开，换行只会落在逗号等标点之后
+  function clauseMarkup(line) {
+    const parts = String(line).match(/[^，、：]+[，、：]?/g) || [line];
+    return parts.map((part) => `<span class="clause">${escapeHTML(part)}</span>`).join("");
+  }
+
   function paragraphs(text) {
     return String(text).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
   }
@@ -149,7 +155,7 @@
             <button class="flow-btn" type="button" aria-pressed="${vertical}">${vertical ? "横排" : "竖排"}</button>
           </div>
           <p class="scripture-text">${lines
-            .map((line, index) => `<span class="line" style="transition-delay:${Math.min(index, 8) * 90}ms">${escapeHTML(line)}</span>`)
+            .map((line, index) => `<span class="line" style="transition-delay:${Math.min(index, 8) * 90}ms">${clauseMarkup(line)}</span>`)
             .join("")}</p>
         </section>
 
