@@ -42,6 +42,8 @@
 - `aiDialogue` 只记录真实发生的讨论，可删繁就简，不可虚构问答。
 - 页面上 AI 产出的内容会标明为 AI 所作，不要把 AI 的话写进用户字段。
 
+- AI 产出的 `aiInterpretation` 与 `imageNote` 末尾必须署明实际所用模型名称与版本号，格式见 `README.md`“署名规则”。
+
 ## 解读写作准则（aiInterpretation）
 
 - 先忠于文本：关键字词训释、句意、本章结构。
