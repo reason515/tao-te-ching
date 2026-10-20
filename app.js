@@ -17,7 +17,6 @@
   const NOTES = [
     { key: "aiInterpretation", label: "AI 解读", kind: "note--ai" },
     { key: "aiDialogue", label: "与 AI 对谈", kind: "note--dialogue" },
-    { key: "personalUnderstanding", label: "心得", kind: "note--self" },
     { key: "sharedReading", label: "与人共读", kind: "note--shared" }
   ];
   const CONTENT_KEYS = ["image", ...NOTES.map((note) => note.key), "quote"];
@@ -93,7 +92,7 @@
     }
     return paragraphs(text).map((p) => {
       const turn = p.match(/^(问|答)[：:]\s*([\s\S]*)$/);
-      if (!turn) return `<p>${escapeHTML(p)}</p>`;
+      if (!turn) return `<p${/^——/.test(p) ? ' class="sig"' : ""}>${escapeHTML(p)}</p>`;
       const isQuestion = turn[1] === "问";
       return `<p class="${isQuestion ? "q" : "a"}"><span class="who" aria-hidden="true">${isQuestion ? "问" : "答"}</span>${escapeHTML(turn[2])}</p>`;
     }).join("");

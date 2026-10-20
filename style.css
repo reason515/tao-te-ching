@@ -477,7 +477,7 @@ button { font: inherit; color: inherit; }
   position: relative;
   color: var(--ai-ink);
 }
-/* 竖线悬在文字左侧的页边，不挤占文字，使左缘与心得对齐 */
+/* 竖线悬在文字左侧的页边，不挤占文字，使左缘与正文对齐 */
 .note--ai .note-body::before,
 .note--dialogue .note-body::before {
   position: absolute;
@@ -488,7 +488,8 @@ button { font: inherit; color: inherit; }
   background: var(--line);
   content: "";
 }
-.note--ai .note-body p.sig {
+.note--ai .note-body p.sig,
+.note--dialogue .note-body p.sig {
   margin-top: 1.8em;
   color: var(--ai-ink-3);
   font-size: .85em;
