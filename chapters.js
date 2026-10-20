@@ -10,8 +10,7 @@ window.TAO_CHAPTERS = [
     "image": "./assets/chapter-01.webp",
     "imageNote": "一缕细白的雾径蜿蜒而来，在抵达门前时碎成微尘，取“道可道，非常道”：路可以描摹，却走不到尽头。远处一扇窄门透出幽青的深光，门内更暗更深，是“玄之又玄，众妙之门”。四周留给虚空，不着一字。\n\n——Claude Sonnet 5.5（配图）",
     "aiInterpretation": "【原意】首句“道可道，非常道”，第一个“道”是名词，指所说的道；第二个“道”是动词，言说。可言说的道，不是恒常之道；可称呼的名，不是恒常之名。“常”，帛书本作“恒”，汉代避文帝讳改为“常”，意为恒久不变。\n\n“无名天地之始，有名万物之母”，这里有断句之争：通行本多作“无名”“有名”，宋人王安石、司马光则读作“无，名天地之始；有，名万物之母”。两读都通，不影响大旨：未命名之前是混沌的开端，命名之后万物才得以分辨、生长。\n\n“常无欲，以观其妙；常有欲，以观其徼”，同样有“常无、常有”的读法。“妙”是微妙难见，“徼”是边界、端倪。无欲时看见深微，有欲时只见事物的边界与用处。“两者”指有与无，或无欲与有欲，“同出而异名”，是一体的两面。“玄”本义为幽远的黑色，“玄之又玄”是说深而又深，不可穷尽；“众妙之门”，是一切微妙的出入之处。\n\n【注家】王弼以“无形无名”解“始”，以“有形有名”解“母”，重在本末；河上公偏重养身，把“无欲、有欲”落到修身上；憨山则以“真常之道”言之。各家着眼不同。\n\n【引申】这一章像是整部书的一个提醒：后面八十章都要用语言去讲，而开篇先说语言有限。我个人倾向于把它读作一种态度：话说到尽处，留一点未说的，让人自己走进去。这属引申，原文并未明言。\n\n——Claude Sonnet 5.5（AI 解读）",
-    "aiDialogue": "",
-    "personalUnderstanding": "读“名可名，非常名”，起初我觉得，名若只是命名，叫什么都行，常名还是非常名，没有那么要紧。\n\n后来明白，这里的“名”不只是一个称呼，还带着分类和评价。给孩子起名“小明”，只是个标签；说他是“差生”，就是一个定语，会让人从此照着它去看他。他往后变了，这个名还留在原处，跟不上他。\n\n名是一张粗网，事物是流动的水，总有网不住的部分。所以用名的时候，要记得名不是事物本身。",
+    "aiDialogue": "问：“名可名，非常名”里的“名”，如果只是命名，意义好像不大。常名还是非常名，看起来也没那么重要。能否举个例子？\n\n答：这里的“名”不止是标签，还带着分类、评价和规矩。给孩子起名“小明”，只是个标签，换一个也无妨；说他是“差生”，就是老子要提防的“名”。名一旦落下，旁人乃至他自己都会照着它去看他。他后来变了，名还留在原处，跟不上他。\n\n问：还有别的例子吗？\n\n答：比如“红”这个字。你想到朱红，我想到夕阳那一抹红，这个字让我们知道在说颜色，却说不尽眼前这一抹。名像粗网，事物像细水，网眼之间总有漏掉的部分。\n\n问：这在当时为什么重要？\n\n答：先秦的“名”是大题目。孔子说“必也正名乎”，用名来规范秩序，君要像君，臣要像臣。老子则回头问：名真能抓住事物吗？可对照第二章“天下皆知美之为美，斯恶已”：定了“美”，“丑”也就同时出现。\n\n问：那是不是说不该命名？\n\n答：并非如此。下一句是“有名万物之母”，命名使万物得以分辨、生长，名是有用的。老子只是提醒：用名时，别把名当成事物本身。以上例子是为帮助理解所举，属引申，非原文所言。\n\n——Claude Sonnet 5.5（AI 对谈）",
     "sharedReading": "",
     "quote": ""
   },
@@ -24,7 +23,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -37,7 +35,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -50,7 +47,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -63,7 +59,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -76,7 +71,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -89,7 +83,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -102,7 +95,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -115,7 +107,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -128,7 +119,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -141,7 +131,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -154,7 +143,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -167,7 +155,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -180,7 +167,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -193,7 +179,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -206,7 +191,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -219,7 +203,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -232,7 +215,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -245,7 +227,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -258,7 +239,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -271,7 +251,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -284,7 +263,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -297,7 +275,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -310,7 +287,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -323,7 +299,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -336,7 +311,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -349,7 +323,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -362,7 +335,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -375,7 +347,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -388,7 +359,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -401,7 +371,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -414,7 +383,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -427,7 +395,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -440,7 +407,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -453,7 +419,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -466,7 +431,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -479,7 +443,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -492,7 +455,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -505,7 +467,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -518,7 +479,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -531,7 +491,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -544,7 +503,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -557,7 +515,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -570,7 +527,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -583,7 +539,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -596,7 +551,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -609,7 +563,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -622,7 +575,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -635,7 +587,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -648,7 +599,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -661,7 +611,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -674,7 +623,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -687,7 +635,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -700,7 +647,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -713,7 +659,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -726,7 +671,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -739,7 +683,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -752,7 +695,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -765,7 +707,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -778,7 +719,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -791,7 +731,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -804,7 +743,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -817,7 +755,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -830,7 +767,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -843,7 +779,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -856,7 +791,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -869,7 +803,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -882,7 +815,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -895,7 +827,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -908,7 +839,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -921,7 +851,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -934,7 +863,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -947,7 +875,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -960,7 +887,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -973,7 +899,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -986,7 +911,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -999,7 +923,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -1012,7 +935,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -1025,7 +947,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -1038,7 +959,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   },
@@ -1051,7 +971,6 @@ window.TAO_CHAPTERS = [
     "imageNote": "",
     "aiInterpretation": "",
     "aiDialogue": "",
-    "personalUnderstanding": "",
     "sharedReading": "",
     "quote": ""
   }
