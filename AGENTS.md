@@ -4,7 +4,7 @@
 
 ## 项目是什么
 
-用户个人学习《道德经》的笔记站点，纯静态页面，发布到 GitHub Pages 供人交流。每章一页：原文、AI 配图、AI 解读、与 AI 的对谈、用户心得。用户会逐章推进，一边读一边让 AI 补充内容。
+用户个人学习《道德经》的笔记站点，纯静态页面，发布到 GitHub Pages 供人交流。每章一页：原文、AI 配图、AI 解读、与 AI 的对谈。用户会逐章推进，一边读一边让 AI 补充内容。
 
 ## 文件职责
 
@@ -25,7 +25,6 @@
 | `imageNote` | AI | 配图创作思路，1-3 句 |
 | `aiInterpretation` | AI | 本章解读 |
 | `aiDialogue` | 用户与 AI | 真实讨论的精炼记录 |
-| `personalUnderstanding` | 用户 | 用户的心得 |
 | `sharedReading` | 用户 | 与他人共读时的交流 |
 | `quote` | 用户（AI 可提议） | 一句收束之语，显示在章末 |
 
@@ -38,11 +37,11 @@
 
 ## 署名与诚实
 
-- `personalUnderstanding`、`sharedReading` 是用户本人的体会。AI 只能根据用户说过的话整理、提炼、润色，不得替用户编造观点或经历。提炼后请用户确认再写入。
+- `sharedReading` 是用户本人与他人共读的交流。AI 只能根据用户说过的话整理、提炼、润色，不得替用户编造观点或经历。提炼后请用户确认再写入。
 - `aiDialogue` 只记录真实发生的讨论，可删繁就简，不可虚构问答。
 - 页面上 AI 产出的内容会标明为 AI 所作，不要把 AI 的话写进用户字段。
 
-- AI 产出的 `aiInterpretation` 与 `imageNote` 末尾必须署明实际所用模型名称与版本号，格式见 `README.md`“署名规则”。
+- AI 产出的 `aiInterpretation`、`aiDialogue` 与 `imageNote` 末尾必须署明实际所用模型名称与版本号，格式见 `README.md`“署名规则”。
 
 ## 解读写作准则（aiInterpretation）
 
@@ -77,7 +76,7 @@
 2. 生成配图，写 `image` 与 `imageNote`。
 3. 撰写 `aiInterpretation`。
 4. 用户与 AI 讨论，精炼后写入 `aiDialogue`。
-5. 帮用户提炼心得，经确认后写入 `personalUnderstanding`，可提议一句 `quote`。
+5. 可提议一句 `quote`，经用户确认后写入。
 6. 本地预览检查，按用户要求提交。
 
 更详细的项目背景见 `README.md`，需要时再读。
